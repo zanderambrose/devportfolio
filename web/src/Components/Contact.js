@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios'
+import axios from "axios";
 
 const Contact = ({ data }) => {
   const [name, setName] = useState("");
@@ -17,12 +17,12 @@ const Contact = ({ data }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post("https://zanderambrose.dev/api/v1/mail", {
-        name,
-        emailFrom: email,
-        subject,
-        message,
-      })
-    console.log("response from post request", response)
+      name: name,
+      emailFrom: email,
+      subject: subject,
+      message: message,
+    });
+    console.log("response from post request", response);
     setName("");
     setEmail("");
     setSubject("");
