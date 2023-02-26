@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios'
 
 const Contact = ({ data }) => {
   const [name, setName] = useState("");
@@ -13,23 +14,15 @@ const Contact = ({ data }) => {
     var contactMessage = data.contactmessage;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch("https://zanderambrose.dev/api/v1/mail", {
-      method: "POST",
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-      body: JSON.stringify({
+    const response = await axios.post("https://zanderambrose.dev/api/v1/mail", {
         name,
         emailFrom: email,
         subject,
         message,
-      }),
-    }).then((response) => {
-      console.log("Response from email sent: ", response);
-    });
+      })
+    console.log("response from post request", response)
     setName("");
     setEmail("");
     setSubject("");
