@@ -2,6 +2,7 @@ version: "3"
 services:
   mail:
     image: bytemark/smtp
+    container_name: emailserver 
     restart: always
   backend:
     build: ./emailBackend
