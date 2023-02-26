@@ -5,8 +5,15 @@ services:
     restart: always
   backend:
     build: ./emailBackend
-    container_name: email_backend
+    container_name: backendportfolio 
     ports:
       - 8005:8005
     volumes:
-      - ./:/code
+      - ./emailBackend:/code
+  web:
+    build: ./web
+    container_name: webportfolio 
+    ports:
+      - 3000:3000
+    volumes:
+      - ./web:/code
