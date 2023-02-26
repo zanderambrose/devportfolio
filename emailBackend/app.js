@@ -26,11 +26,11 @@ app.post("/api/v1/mail", async (req, res) => {
     subject: subject, // Subject line
     text: message, // plain text body
     html: `
-    <p>A new contact request from zanderambrose.dev</p>
+    <h1>Email from Portfolio Website</h1>
     <h3>Contact Details</h3>
     <ul>
-      <li>${name}</li>
-      <li>${emailFrom}</li>
+      <li>Name: ${name}</li>
+      <li>Email from: ${emailFrom}</li>
     </ul>
     <h3>Message</h3>
     <p>${message}</p>
