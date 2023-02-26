@@ -17,12 +17,16 @@ const Contact = ({ data }) => {
     e.preventDefault();
     fetch("https://zanderambrose.dev/api/v1/mail", {
       method: "POST",
-      body: {
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+      body: JSON.stringify({
         name,
         emailFrom: email,
         subject,
         message,
-      },
+      }),
     }).then((response) => {
       console.log("Response from email sent: ", response);
     });
