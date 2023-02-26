@@ -18,14 +18,10 @@ app.post("/api/v1/mail", async (req, res) => {
     host: "mail",
     port: 25,
     secure: false, // true for 465, false for other ports
-    auth: {
-      user: "ellsworth67@ethereal.email", // generated ethereal user
-      pass: "Cu21kSKf27qQdF8dzu", // generated ethereal password
-    },
   });
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: `"${name} ${emailFrom}`, // sender address
+    from: `zander@zanderambrose.dev`, // sender address
     to: "alexander.d.ambrose@gmail.com", // list of receivers
     subject: subject, // Subject line
     text: message, // plain text body
