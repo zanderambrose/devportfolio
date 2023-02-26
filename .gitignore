@@ -2,7 +2,7 @@
 deploy.sh
 
 # dependencies
-/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
@@ -10,7 +10,7 @@ deploy.sh
 /coverage
 
 # production
-/build
+**/build
 
 # misc
 .DS_Store
