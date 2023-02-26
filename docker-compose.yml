@@ -4,7 +4,7 @@ services:
     image: bytemark/smtp
     restart: always
   backend:
-    build: .
+    build: ./emailBackend
     container_name: email_backend
     ports:
       - 8005:8005
