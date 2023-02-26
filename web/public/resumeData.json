@@ -1,0 +1,58 @@
+{
+  "main": {
+    "name": "Zander Ambrose",
+    "occupation": "Software Engineer",
+    "description": "Full Stack Developer looking to solve problems via software",
+    "image": "profilepic.png",
+    "bio": "Hi there! My name is Zander! I'm a self taught developer with 3 years of programming experience. As a Full Stack developer I've worked both with startups and as a freelancer to help turn an idea into reality.",
+    "contactmessage": "Get in touch with me!",
+    "email": "alexander.d.ambrose@gmail.com",
+    "phone": "(860) 808-8655",
+    "address": {
+      "city": "New York City"
+    },
+    "resumedownload": "/ZanderAmbroseDeveloperPortfolio.pdf",
+    "social": [
+      {
+        "name": "github",
+        "url": "https://github.com/zanderambrose",
+        "className": "fa fa-github"
+      },
+      {
+        "name": "linkedin",
+        "url": "https://www.linkedin.com/in/alexander-ambrose/",
+        "className": "fa fa-linkedin"
+      },
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/Zander__Ambrose",
+        "className": "fa fa-twitter"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Simply Food",
+      "url": "https://simply-food.netlify.app/",
+      "img": "portfolio-projects-thumbnails/simplyFood.png",
+      "github": "https://github.com/zanderambrose/Simply-Food",
+      "techStackSkills": [
+        "React Js",
+        "HTTP API GET requests",
+        "React Router",
+        "Axios",
+        "Regular Expressions",
+        "React Styled Components",
+        "CSS Grid",
+        "Custom CSS"
+      ]
+    },
+    {
+      "title": "Developer Portfolio",
+      "url": "https://zanderambrose.dev/",
+      "img": "portfolio-projects-thumbnails/devPortfolio.png",
+      "github": "....",
+      "techStackSkills": ["React Js", "Fetch API", "CSS Grid", "CSS Flexbox"]
+    }
+  ]
+}
