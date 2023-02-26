@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.post("/api/v1/mail", async (req, res) => {
   const { name, emailFrom, subject, message } = req.body;
-  console.log("POST request data: ", name,emailFrom,subject,message)
+  console.log("POST request data: ", name, emailFrom, subject, message);
   let transporter = nodemailer.createTransport({
     host: "mail",
     port: 25,
@@ -29,6 +29,16 @@ app.post("/api/v1/mail", async (req, res) => {
     to: "alexander.d.ambrose@gmail.com", // list of receivers
     subject: subject, // Subject line
     text: message, // plain text body
+    html: `
+    <p>A new contact request from zanderambrose.dev</p>
+    <h3>Contact Details</h3>
+    <ul>
+      <li>${name}</li>
+      <li>${emailFrom}</li>
+    </ul>
+    <h3>Message</h3>
+    <p>${message}</p>
+    `,
   });
 
   console.log("Message sent: %s", info.messageId);
